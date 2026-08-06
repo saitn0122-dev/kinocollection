@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавить фильм</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">IVI</div>
+    <nav>
+      <a href="index.html">Мои фильмы</a>
+      <a href="form.html">+ Добавить фильм</a>
+      <a href="about.html">О проекте</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h1 id="page-title">Добавить новый фильм</h1>
+      
+      <form id="movie-form">
+      <label>Название фильма *</label>
+<input type="text" id="title" required>
+
+<label>Жанр</label>
+<input type="text" id="genre" placeholder="Например: Фантастика, Драма, Комедия..." list="genre-list">
+
+<datalist id="genre-list">
+  <option value="Фантастика">
+  <option value="Драма">
+  <option value="Экшен">
+  <option value="Комедия">
+  <option value="Триллер">
+  <option value="Ужасы">
+  <option value="Приключения">
+  <option value="Фэнтези">
+  <option value="Научная фантастика">
+  <option value="Мелодрама">
+</datalist>
+
+<label>Дата выхода</label>
+<input type="date" id="releaseDate">
+
+<label>Ссылка на постер (опционально)</label>
+<input type="url" id="poster" placeholder="https://example.com/poster.jpg">
+
+<div style="margin-top: 30px; display: flex; gap: 15px;">
+  <button type="submit" class="btn btn-primary" style="flex: 1; padding: 16px;">Сохранить</button>
+  <a href="index.html" style="flex: 1; text-align: center; padding: 16px; background: #333; color: white; text-decoration: none; border-radius: 8px;">Отмена</a>
+</div>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="js/form.js"></script>
+</body>
+</html>
